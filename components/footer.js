@@ -6,9 +6,9 @@ footerTemplate.innerHTML = `
   display:  table;
   table-layout: fixed;
   background-color: white;
-  border: medium solid black;
+  border: medium solid #1a1a1a;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px #1a1a1a;
   width: 85vw;
   height: fit-content;
   margin-right: auto;
@@ -16,8 +16,6 @@ footerTemplate.innerHTML = `
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-align: center;
-  justify-items: center;
-  align-items: center;
 }
 .foot a{
   color: #ff2a2a;
@@ -40,7 +38,6 @@ footerTemplate.innerHTML = `
   font-size: 12px;
   font-weight: 400;
 }
-
 </style>
     <div class="foot">
     <ul>
@@ -61,7 +58,7 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     const fontAwesome = document.querySelector('link[href*="font-awesome"]');
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     if (fontAwesome) {
       shadowRoot.appendChild(fontAwesome.cloneNode());

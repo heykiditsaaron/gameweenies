@@ -10,9 +10,9 @@ headerTemplate.innerHTML = `
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color:  #0a0a23;
+      background-color:  #1a1a1a;
       border-radius: 10px;
-      box-shadow: 2px 2px 5px black;
+      box-shadow: 2px 2px 5px #1a1a1a;
     }
 
     ul {

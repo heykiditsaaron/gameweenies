@@ -1,35 +1,15 @@
-body {
+  body {
     background-color: #ebc544;
     background-image: url(../img/gw_background.png);
     background-size: 256px;
     background-repeat: repeat;
+    font-family: sans-serif;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
   }
-  article{
-    padding: 12px;
-  }
-  h1 {
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h2 {
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h3 {
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+  main{
+    flex: 1 0 auto;
   }
   a{
     color: #ff2a2a;
@@ -39,27 +19,36 @@ body {
     color: #ff2a2a;
     text-decoration: underline;
   }
-  li::marker {
-    color: white;
-    align-items: center;
-  }
-  p {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    margin: auto;
-  }
-  .main {
+  .whiteblock {
     display:  table;
     background-color: white;
     width: 85vw;
     height: auto;
-    border: medium solid black;
+    border: medium solid #1a1a1a;
     border-radius: 10px;
     padding: 0px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px #1a1a1a;
+  }
+  .whiteblock p{
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  .whiteblock h1{
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #1a1a1a;
+  }
+  .whiteblock h2{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .whiteblock h3{
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .weenie {
     display: block;
