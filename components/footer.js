@@ -34,13 +34,18 @@ footerTemplate.innerHTML = `
   padding: 4px;
 }
 </style>
-    <div class="foot">
+    <div class="foot" style="column-count: 5;">
     <p>
       <span><a href="index.html"><i class="fa-solid fa-house"></i><br>Home</a></span>
-      <span><a href="https://discord.gg"><i class="fa-brands fa-discord"></i><br>Discord</a></span>
+      <span><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i><br>Discord</a></span>
       <span><a href="tos.html"><i class="fa-solid fa-file-contract"></i><br>Terms</a></span>
       <span><a href="privacy.html"><i class="fa-solid fa-lock"></i><br>Privacy</a></span>
       <span><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></span>
+    </p>
+    <p><span></span><span></span>
+    <span style="column-span: all;">
+    &#169 2024 GameWeenies. All rights reserved.
+    </span>
     </p>
     </div>
 `;
