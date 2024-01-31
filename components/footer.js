@@ -49,7 +49,6 @@ footerTemplate.innerHTML = `
       <li><a href="tos.html"><i class="fa-solid fa-file-contract"></i><br>Terms</a></li>
       <li><a href="privacy.html"><i class="fa-solid fa-lock"></i><br>Privacy</a></li>
       <li><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></li>
-      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></li>
     </ul>
     <p class="copy">&copy 2024 GameWeenies. All rights reserved.</span>
     </div>
