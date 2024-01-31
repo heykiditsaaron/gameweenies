@@ -29,12 +29,23 @@ footerTemplate.innerHTML = `
 }
 .foot span{
   display: table-cell;
+  widht: auto;
   padding: 4px 7px;
 }
+.weenie {
+  display: block;
+  margin-left: 0px;
+  margin-right: auto;
+  width: 7vw;
+  position: fixed;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
 </style>
-  <footer>
     <div class="foot">
     <p>
+      <span><img src="./img/weenie.png" class="weenie"></span>
+
       <span><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></span>
       
       <span><a href="tos.html">Terms</a></span>
@@ -50,7 +61,6 @@ footerTemplate.innerHTML = `
       <span><a href="https://www.linkedin.com/in/my-linkedin-profile"><i class="fab fa-linkedin"></i></a></span>
     </p>
     </div>
-  </footer>
 `;
 
 class Footer extends HTMLElement {
