@@ -4,6 +4,7 @@ footerTemplate.innerHTML = `
 <style>
 .foot {
   display:  table;
+  table-layout: fixed;
   background-color: white;
   border: medium solid black;
   border-radius: 10px;
@@ -14,6 +15,7 @@ footerTemplate.innerHTML = `
   margin-right: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
+  text-align: center;
 }
 .foot a{
   color: #ff2a2a;
@@ -25,40 +27,20 @@ footerTemplate.innerHTML = `
 }
 .foot p{
   display: table-row;
-  text-align: center;
+  width: auto;
 }
 .foot span{
   display: table-cell;
-  widht: auto;
-  padding: 4px 7px;
-}
-.weenie {
-  display: block;
-  margin-left: 0px;
-  margin-right: auto;
-  width: 7vw;
-  position: fixed;
-  margin-top: 0px;
-  margin-bottom: 1px;
+  padding: 4px;
 }
 </style>
     <div class="foot">
     <p>
-      <span><img src="./img/weenie.png" class="weenie"></span>
-
-      <span><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></span>
-      
-      <span><a href="tos.html">Terms</a></span>
-      
-      <span><a href="privacy.html">Privacy Notice</a></span>
-      
-      <span><a href="contact.html">Contact</a></span>
-
-      <span><a href="https://discord.gg"><i class="fab fa-discord"></i></i></a></span>
-
-      <span><a href="https://twitter.com/my-twitter-profile"><i class="fab fa-twitter"></i></a></span>
-      
-      <span><a href="https://www.linkedin.com/in/my-linkedin-profile"><i class="fab fa-linkedin"></i></a></span>
+      <span><a href="index.html"><i class="fa-solid fa-house"></i><br>Home</a></span>
+      <span><a href="https://discord.gg"><i class="fa-brands fa-discord"></i><br>Discord</a></span>
+      <span><a href="tos.html"><i class="fa-solid fa-file-contract"></i><br>Terms</a></span>
+      <span><a href="privacy.html"><i class="fa-solid fa-lock"></i><br>Privacy</a></span>
+      <span><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></span>
     </p>
     </div>
 `;
