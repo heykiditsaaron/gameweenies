@@ -11,11 +11,13 @@ footerTemplate.innerHTML = `
   box-shadow: 2px 2px 5px black;
   width: 85vw;
   height: fit-content;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-align: center;
+  justify-items: center;
+  align-items: center;
 }
 .foot a{
   color: #ff2a2a;
@@ -25,28 +27,31 @@ footerTemplate.innerHTML = `
   color: #ff2a2a;
   text-decoration: underline;
 }
-.foot p{
-  display: table-row;
-  width: auto;
+.foot ul{
+  display: grid;
+  list-style: none;
+  grid-auto-flow: column;
+  padding: 0px;
 }
-.foot span{
-  display: table-cell;
-  padding: 4px;
+.foot ul li{
+  display: inline-table;
 }
+.copy{
+  font-size: 12px;
+  font-weight: 400;
+}
+
 </style>
-    <div class="foot" style="column-count: 5;">
-    <p>
-      <span><a href="index.html"><i class="fa-solid fa-house"></i><br>Home</a></span>
-      <span><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i><br>Discord</a></span>
-      <span><a href="tos.html"><i class="fa-solid fa-file-contract"></i><br>Terms</a></span>
-      <span><a href="privacy.html"><i class="fa-solid fa-lock"></i><br>Privacy</a></span>
-      <span><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></span>
-    </p>
-    <p><span></span><span></span>
-    <span style="column-span: all;">
-    &#169 2024 GameWeenies. All rights reserved.
-    </span>
-    </p>
+    <div class="foot">
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i><br>Home</a></li>
+      <li><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i><br>Discord</a></li>
+      <li><a href="tos.html"><i class="fa-solid fa-file-contract"></i><br>Terms</a></li>
+      <li><a href="privacy.html"><i class="fa-solid fa-lock"></i><br>Privacy</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i><br>Contact</a></li>
+    </ul>
+    <p class="copy">&copy 2024 GameWeenies. All rights reserved.</span>
     </div>
 `;
 
