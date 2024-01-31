@@ -47,9 +47,9 @@ body {
     margin: auto;
   }
   .main {
-    display: block;
+    display:  table;
     background-color: white;
-    width: 90vw;
+    width: 85vw;
     height: auto;
     border: medium solid black;
     border-radius: 10px;
