@@ -19,6 +19,14 @@
     color: #ff2a2a;
     text-decoration: underline;
   }
+  .c_iframe iframe{
+    width: 84vw;
+    height: 100%;
+  }
+  .c_iframe{
+    width: 100%;
+    height: 1000px;
+  }
   .whiteblock {
     display:  table;
     background-color: white;
