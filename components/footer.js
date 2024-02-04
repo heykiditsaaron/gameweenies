@@ -60,7 +60,7 @@ footerTemplate.innerHTML = `
     }
     .weenie{
       position: absolute;
-      height: max(175%, 20vw);
+      height: max(175%, 10vw);
       bottom: 0;
       left: 0;
     }
