@@ -18,32 +18,35 @@ footerTemplate.innerHTML = `
     .footer h1{
         font-size: small;
         font-style: oblique;
-        margin: 1;
+        margin-left: 10%;
     }
     .footer p{
         margin: 0;
     }
+    .footer ul{
+        list-style: none;
+    }
+    .footer li{
+        margin: 2px 2px;
+    }
     .fspan{
         display: table;
-        margin: 0;
+        width: 100%;
         margin-right: 0;
-        padding-top: 4px;
+        padding-top: 8px;
         padding-bottom: 8px;
     }
     .left{
         display: table-cell;
-        width: 32vw;
-        padding-left: 4%;
-    }
-    .mid{
-        display: table-cell;
-        width: 33vw;
-        padding-left: 4%;
+        width: 50%;
+        border-right: 2px solid #2b2b2b;
+        padding-left: 25%;
     }
     .right{
         display: table-cell;
-        padding-left: 4%;
         width: auto;
+        text-align: justified;
+        padding-left: 10%;
     }
     .copy{
         display: table-row;
@@ -57,33 +60,29 @@ footerTemplate.innerHTML = `
     }
     .weenie{
       position: absolute;
-      width: 28vw;
+      height: 175%;
       bottom: 0;
       left: 0;
     }
-    </style><img src="https://gameweenies.net/img/weenie.png" title="GameWeenie" class="weenie">
+    </style>
     <div class="footer">
         <div class="fspan">
-        
-            <div class="left">
-            
+            <div>
+            <img src="https://gameweenies.net/img/weenie.png" title="GameWeenie" class="weenie">
             </div>
-            <div class="mid">
-            <h1>Claims</h1>
-            <p>a</p>
-            <p>b</p>
-            <p>c</p>
-            <p>d</p>
-            <p>e</p>
+            <div class="left">
+                <h1>Site</h1>
+                <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbspHome</a></li>
+                <li><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i>&nbspDiscord</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>&nbspContact</a></li>
+                </ul>
             </div>
             <div class="right">
                 <h1>Information</h1>
-                <ul style="list-style: none; margin: 0; padding-left: 8px;">
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i>Discord</a></li>
-                <li><a href="tos.html"><i class="fa-solid fa-file-contract"></i>Terms and Conditions</a></li>
-                <li><a href="privacy.html"><i class="fa-solid fa-lock"></i>Privacy Notice</a></li>
-                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                <ul>
+                <li><a href="tos.html"><i class="fa-solid fa-file-contract"></i>&nbspTerms and Conditions</a></li>
+                <li><a href="privacy.html"><i class="fa-solid fa-lock"></i>&nbspPrivacy Notice</a></li>
                 </ul>
             </div>
         </div>
