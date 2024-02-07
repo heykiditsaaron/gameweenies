@@ -91,7 +91,6 @@ footer {
   margin: 20px 0px 0px 0px;
   font-size: small;
   color: #eeeeee;
-  flex-direction: row-reverse;
 }
 footer ul {
   list-style: none;
@@ -101,7 +100,7 @@ footer h1 {
   font-size: small;
 }
 
-#left {
+footer #left {
   display: inline-block;
   width: auto;
   min-width: fit-content;
@@ -109,7 +108,7 @@ footer h1 {
   margin: 0px auto auto 30px;
   
 }
-#right {
+footer #right {
   display: inline-block;
   width: auto;
   min-width: fit-content;
@@ -117,6 +116,7 @@ footer h1 {
   margin: 0px auto auto 30px;
   padding: 0px 10px 0px 30px;
 }
-#copyright {
+footer #copyright {
   grid-area: c;
+  text-align: center;
 }
