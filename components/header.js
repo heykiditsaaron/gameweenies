@@ -3,16 +3,12 @@ const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
   <style>
     nav {
-      width: 85vw;
       height: 40px;
       margin-left: auto;
       margin-right: auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color:  #1a1a1a;
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px #1a1a1a;
     }
 
     ul {

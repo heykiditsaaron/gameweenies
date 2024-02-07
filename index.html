@@ -10,22 +10,42 @@
     <link href="./html/style.css" rel="stylesheet" type="text/css" />
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
+    <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
   </head>
   <body>
-    <header><header-component></header-component></header>
-    <main>
+    <header>
+      HEADER
+    </header>
+    <nav>
+      <header-component></header-component>
+    </nav>
+
+    <aside>
+      <article>
+        <h1>Multiplayer Servers:</h1>
       <br>
-        <div class="whiteblock">
-          <article>
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/25193292.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjI1MTkzMjkyLCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjRUVFRUVFIiwibGlua0NvbG9yIjoiI2ZmMmEyYSIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMWExYTFhIiwiY2hhcnQiOiIiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCIsInNob3dQbGF5ZXJzIjoiMSIsIm1heFBsYXllcnNIZWlnaHQiOiIzMDAifSwibGl2ZVVwZGF0ZXMiOnRydWUsInVzZXJfaWQiOjgxOTMwNSwiaWF0IjoxNzA3MjU1Nzc5fQ.4jacOluHgFyh2yAMkjDbhUFdVdphS8Ny0HAJMRmSBeE" frameborder=0 style="border:0" name="Palworld"></iframe>
+      <br>
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/25193292.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjI1MTkzMjkyLCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjRUVFRUVFIiwibGlua0NvbG9yIjoiI2ZmMmEyYSIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMWExYTFhIiwiY2hhcnQiOiIiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCIsInNob3dQbGF5ZXJzIjoiMSIsIm1heFBsYXllcnNIZWlnaHQiOiIzMDAifSwibGl2ZVVwZGF0ZXMiOnRydWUsInVzZXJfaWQiOjgxOTMwNSwiaWF0IjoxNzA3MjU1Nzc5fQ.4jacOluHgFyh2yAMkjDbhUFdVdphS8Ny0HAJMRmSBeE" frameborder=0 style="border:0" name="xpjve"></iframe>
+      <br>
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/25193292.html?_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InN0YW5kYXJkVmVydGljYWwiLCJzZXJ2ZXIiOjI1MTkzMjkyLCJvcHRpb25zIjp7ImZvcmVncm91bmQiOiIjRUVFRUVFIiwibGlua0NvbG9yIjoiI2ZmMmEyYSIsImxpbmVzIjoiIzMzMzMzMyIsImJhY2tncm91bmQiOiIjMWExYTFhIiwiY2hhcnQiOiIiLCJjaGFydENvbG9yIjoiI0ZGMDcwMCIsInNob3dQbGF5ZXJzIjoiMSIsIm1heFBsYXllcnNIZWlnaHQiOiIzMDAifSwibGl2ZVVwZGF0ZXMiOnRydWUsInVzZXJfaWQiOjgxOTMwNSwiaWF0IjoxNzA3MjU1Nzc5fQ.4jacOluHgFyh2yAMkjDbhUFdVdphS8Ny0HAJMRmSBeE" frameborder=0 style="border:0" name="cfjve"></iframe>
+      <br>
+      </article>
+    </aside>
+
+    <main>
+      <article>
         <h1 style="text-align: center;">Welcome to Game Weenies</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-          </article>
-      </div>
-        <br>  
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
     </main>
-    <footer style="position: absolute; bottom: 0;" !important>
-      <footer-component></footer-component>
+    <footer>
+      just footer stuff
+      <p>foots</p>
     </footer>
   </body>
 </html>
