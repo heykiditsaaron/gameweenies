@@ -120,3 +120,6 @@ footer #copyright {
   grid-area: c;
   text-align: center;
 }
+footer #footweenie{
+  max-width: 22vw;
+}
