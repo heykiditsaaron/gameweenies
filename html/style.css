@@ -56,13 +56,13 @@ body {
     }
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
-      float: left;
+      float: right;
       display: block;
     }
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
-      left: 0;
+      right: 0;
       top: 0;
     }
     .topnav.responsive a {
