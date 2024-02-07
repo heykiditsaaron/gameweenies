@@ -122,4 +122,5 @@ footer #copyright {
 }
 footer #footweenie{
   max-width: 22vw;
+  display: inline-block;
 }
