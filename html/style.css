@@ -16,6 +16,30 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  @media all and (max-width: 60em) {
+    /* Too narrow to support three columns */
+    body { 
+      display: grid;
+      grid: "h"
+            "n"
+            "b"
+            "a"
+            "f";
+      grid-template-rows: min-content min-content 1fr min-content min-content;
+    }
+    main article {
+
+      width: 80dvw !important;
+      max-width: 80dvw !important;
+      margin: 20px auto auto auto !important;
+    }
+    aside article{
+      width: 80dvw !important;
+      max-width: 80dvw !important;
+      margin: 20px auto auto auto !important;
+    }
+  }
+
   a{
     color: #ff2a2a;
     text-decoration: none;
@@ -75,11 +99,12 @@ aside {
     border: medium solid #1a1a1a;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
-    padding: 2px 2px 2px 2px;
-    margin: 20px auto 20px auto;
+    padding: 10px 2px 2px 2px;
+    margin: 20px 8dvw 20px auto;
     width: 90%;
     min-width: fit-content;
     color: #eeeeee;
+    text-align: center;
   }
 
 footer {
@@ -91,6 +116,9 @@ footer {
   margin: 20px 0px 0px 0px;
   font-size: small;
   color: #eeeeee;
+  display: grid;
+  grid: "l r"
+        "c c";
 }
 footer ul {
   list-style: none;
@@ -101,15 +129,16 @@ footer h1 {
 }
 
 footer #left {
+  grid-area: l;
   display: inline-block;
   width: auto;
   min-width: fit-content;
   vertical-align: top;
-  margin: 0px auto auto 30px;
+  margin: 0px 10px auto 30px;
   
 }
 footer #right {
-  display: inline-block;
+  grid-area: r;
   width: auto;
   min-width: fit-content;
   vertical-align: top;
@@ -119,8 +148,4 @@ footer #right {
 footer #copyright {
   grid-area: c;
   text-align: center;
-}
-footer #footweenie{
-  max-width: 22vw;
-  display: inline-block;
 }
