@@ -74,26 +74,40 @@ aside {
     color: #eeeeee;
   }
 
-footer{
+footer {
   grid-area: f;
-  display: grid;
-  grid: "l r"
-        "c c";
-  grid-template-columns: auto auto; 
-  min-width: 100%; 
+  min-width: 100%;
   min-height: fit-content;
-  vertical-align: baseline;
   background-color: #1a1a1a;
   position: fixed;
   bottom: 0;
   font-size: small;
+  color: #eeeeee;
+  flex-direction: row-reverse;
 }
+footer ul {
+  list-style: none;
+  padding: 0px 0px 0px 2px;
+}
+footer h1 {
+  font-size: small;
+}
+
 #left {
-  grid-area: l;
-  background-color: firebrick;
+  display: inline-block;
+  width: auto;
+  min-width: fit-content;
+  vertical-align: top;
+  margin: 0px auto auto 30px;
+  
 }
 #right {
-  grid-area: r;
+  display: inline-block;
+  width: auto;
+  min-width: fit-content;
+  vertical-align: top;
+  margin: 0px auto auto 30px;
+  padding: 0px 10px 0px 30px;
 }
 #copyright {
   grid-area: c;
