@@ -10,7 +10,6 @@ body {
     background-image: url(../img/gw_background.png);
     background-size: 256px;
     background-repeat: repeat;
-    min-height: 100vh;
     max-height: fit-content;
     width: 100%;
     margin: 0px;
@@ -22,8 +21,19 @@ body {
   }
   a:hover{
     color: #ff2a2a;
-    text-decoration: underline;
+    text-decoration: none;
   }
+
+  header{
+    grid-area: h; 
+    min-width: 100%; 
+    max-height: fit-content; 
+    min-height: fit-content;
+    background-color: #1a1a1a;
+    text-align: center;
+    color: white;
+}
+
 main{
     grid-area: b;
     vertical-align: top;
@@ -38,12 +48,14 @@ main{
     padding: 0px 20px 0px 20px;
     max-width: 90%;
   }
+
 nav{
     grid-area: n;
     vertical-align: top;
     min-width: fit-content;
     background-color: #1a1a1a;
   }
+
 aside {
     grid-area: a;
     vertical-align: top;
@@ -60,25 +72,14 @@ aside {
     width: 90%;
     min-width: fit-content;
     color: #eeeeee;
-    text-align: center;
-    justify-content: center;
   }
-  aside article p {
-    justify-content: center;
-  }
-header{
-    grid-area: h; 
-    min-width: 100%; 
-    max-height: fit-content; 
-    min-height: fit-content;
-    background-color: #1a1a1a;
-    text-align: center;
-    color: white;
-}
+
 footer{
   grid-area: f; 
   min-width: 100%; 
   min-height: fit-content;
   vertical-align: baseline;
   background-color: #1a1a1a;
+  position: fixed;
+  bottom: 0;
 }
