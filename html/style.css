@@ -4,7 +4,7 @@ body {
           "n n"
           "b a"
           "f f";
-    grid-template-columns: auto auto;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: min-content min-content 1fr min-content;
     background-color: #ebc544;
     background-image: url(../img/gw_background.png);
@@ -23,7 +23,7 @@ body {
     }
   }
 
-  @media all and (max-width: 600px) {
+  @media all and (max-width: 700px) {
     /* Too narrow to support three columns */
     body { 
       display: grid;
@@ -35,39 +35,34 @@ body {
       grid-template-rows: min-content min-content 1fr min-content min-content;
     }
     main article {
-
       width: 80dvw !important;
       max-width: 80dvw !important;
       margin: 20px auto auto auto !important;
     }
-    aside article{
-      width: 80dvw !important;
-      max-width: 80dvw !important;
-      margin: 20px auto auto auto !important;
-    }
-    
     main section {
-
       width: 80dvw !important;
       max-width: 80dvw !important;
       margin: 20px auto auto auto !important;
     }
-    aside section{
+    aside article {
+      width: 80dvw !important;
+      max-width: 80dvw !important;
+      margin: 20px auto auto auto !important;
+    }
+    aside section {
       width: 80dvw !important;
       max-width: 80dvw !important;
       margin: 20px auto auto auto !important;
     }
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
-      float: right;
+      float: left;
       display: block;
     }
-  }
-  @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
     }
     .topnav.responsive a {
@@ -82,14 +77,18 @@ body {
     min-width: 100%; 
     max-height: fit-content; 
     min-height: fit-content;
-    background-color: #1a1a1a;
     text-align: center;
     color: #eeeeee;
 }
 
 main{
     grid-area: b;
-    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
   }
   main article{
     display: block;
@@ -114,9 +113,9 @@ main{
 
 nav{
     grid-area: n;
-    vertical-align: top;
-    min-width: fit-content;
+    min-width: 100%;
     background-color: #1a1a1a;
+    border-bottom: 2px solid #eeeeee;
   }
   nav ul{
     list-style: none;
@@ -130,8 +129,12 @@ nav{
 
 aside {
     grid-area: a;
-    vertical-align: top;
-    min-width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
   }
   aside article{
     display: block;
@@ -139,12 +142,10 @@ aside {
     border: medium solid #1a1a1a;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
-    padding: 10px 2px 2px 2px;
-    margin: 20px 8dvw 20px auto;
-    width: 90%;
-    min-width: fit-content;
+    padding: 10px 20px 2px 20px;
+    margin: 20px auto auto auto;
     color: #eeeeee;
-    text-align: center;
+    max-width: 70%;
   }
   aside section{
     display: block;
@@ -152,12 +153,18 @@ aside {
     border: medium solid #1a1a1a;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
-    padding: 10px 2px 2px 2px;
-    margin: 20px 8dvw 20px auto;
-    width: 90%;
-    min-width: fit-content;
+    padding: 10px 20px 2px 20px;
+    margin: 20px auto auto auto;
     color: #eeeeee;
-    text-align: center;
+    width: 70%;
+  }
+  aside section *{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
   }
 
 footer {
@@ -197,9 +204,9 @@ footer #right {
   vertical-align: top;
   margin: 0px auto auto 30px;
   padding: 0px 10px 0px 30px;
-}
+  grid-area: c;}
 footer #copyright {
-  grid-area: c;
+
   text-align: center;
 }
 /* Add a black background color to the top navigation */
@@ -210,7 +217,7 @@ footer #copyright {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
