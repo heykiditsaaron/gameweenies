@@ -85,7 +85,9 @@ nav{
   }
   nav ul li{
     display: inline;
-    padding-inline: 40px;
+    flex-grow: auto;
+    margin: auto;
+    padding-inline: auto;
   }
 
 aside {
