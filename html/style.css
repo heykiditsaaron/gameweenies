@@ -75,11 +75,26 @@ aside {
   }
 
 footer{
-  grid-area: f; 
+  grid-area: f;
+  display: grid;
+  grid: "l r"
+        "c c";
+  grid-template-columns: auto auto; 
   min-width: 100%; 
   min-height: fit-content;
   vertical-align: baseline;
   background-color: #1a1a1a;
   position: fixed;
   bottom: 0;
+  font-size: small;
+}
+#left {
+  grid-area: l;
+  background-color: firebrick;
+}
+#right {
+  grid-area: r;
+}
+#copyright {
+  grid-area: c;
 }
