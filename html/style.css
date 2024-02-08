@@ -71,6 +71,9 @@ body {
       text-align: left;
     }
   }
+#components {
+    display: contents;
+}
 
   header{
     grid-area: h; 
