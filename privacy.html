@@ -12,14 +12,23 @@
     <script>
       $(document).ready(function(){
    
-        $('header').load("https://gameweenies.net/components/header.html");
-        $('nav').load("https://gameweenies.net/components/nav.html");
-        $('footer').load("https://gameweenies.net/components/footer.html");
-
+        $("#components").load("https://gameweenies.net/index.html #components" );
+        
       });
     </script>
   </head>
   <body>
+    <div class="components" id="components"></div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
     <main>
       <article>
         <img src="./img/weenie.png" alt="Weenie" style="width: 25%; float: right;">
