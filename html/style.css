@@ -82,8 +82,11 @@ body {
     min-height: fit-content;
     text-align: center;
     color: #eeeeee;
+    display: inline-flex;
 }
-
+header img{
+    max-height: 1fr;
+}
 main{
     grid-area: b;
     display: flex;
