@@ -82,7 +82,8 @@ body {
     min-height: fit-content;
     text-align: center;
     color: #eeeeee;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 header img{
     max-height: 100px;
