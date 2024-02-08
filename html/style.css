@@ -85,7 +85,7 @@ body {
     display: inline-flex;
 }
 header img{
-    max-height: 1fr;
+    max-height: 100%;
 }
 main{
     grid-area: b;
