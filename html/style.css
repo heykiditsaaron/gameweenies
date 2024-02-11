@@ -39,6 +39,8 @@ header{
     color: #eeeeee;
     display: inline-flex;
     flex-direction: row;
+    justify-content: center;
+
 }
 header img{
     max-height: 100px;
