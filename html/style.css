@@ -5,7 +5,7 @@ body {
           "n n"
           "b a"
           "f f";
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
     grid-template-rows: min-content min-content 1fr min-content;
     background-color: #ebc544;
     background-image: url(../img/gw_background.png);
@@ -49,9 +49,6 @@ header img{
 /* Begin Main Body Content */
 main{
     grid-area: b;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
   main section{
     display: block;
@@ -77,6 +74,21 @@ main{
   main p{
     max-width: 100%;
     overflow-wrap: break-word;
+  }
+  .servers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #1a1a1a;
+    border: medium solid #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1a1a1a;
+    margin: 20px auto auto auto;
+    padding: 2px;
+    color: #eeeeee;
+    width: 90%;
   }
   
 /* Begin Nav Bar Conponent */
