@@ -1,10 +1,11 @@
+/* Begin  */
 body {
     display: grid;
     grid: "h h"
           "n n"
           "b a"
           "f f";
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: min-content min-content 1fr min-content;
     background-color: #ebc544;
     background-image: url(../img/gw_background.png);
@@ -17,96 +18,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     a {
       color: #ff2a2a;
+      text-decoration: none;
     }
     a:hover{
       text-decoration: none;
-    }
-  }
-
-  @media all and (max-width: 700px) {
-    /* Too narrow to support three columns */
-    body { 
-      display: grid;
-      grid: "h"
-            "n"
-            "b"
-            "a"
-            "f";
-      grid-template-rows: min-content min-content 1fr min-content min-content;
-    }
-    main article {
-      width: 80dvw !important;
-      max-width: 80dvw !important;
-      margin: 20px auto auto auto !important;
-    }
-    main section {
-      width: 80dvw !important;
-      max-width: 80dvw !important;
-      margin: 20px auto auto auto !important;
-    }
-    aside article {
-      width: 80dvw !important;
-      max-width: 80dvw !important;
-      margin: 20px auto auto auto !important;
-    }
-    aside section {
-      width: 80dvw !important;
-      max-width: 80dvw !important;
-      margin: 20px auto auto auto !important;
-    }
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
     }
   }
 .components {
     display: contents;
 }
 
-  header{
+/* Begin Header Component */
+header{
     grid-area: h; 
-    min-width: 100%; 
+    min-width: 100%;
     max-height: fit-content; 
     min-height: fit-content;
     text-align: center;
     background-color: #1a1a1a;
     color: #eeeeee;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: inline-flex;
+    flex-direction: row;
 }
 header img{
     max-height: 100px;
 }
+
+/* Begin Main Body Content */
 main{
     grid-area: b;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  main article{
-    display: block;
-    background-color: #eeeeee;
-    border: medium solid #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px #1a1a1a;
-    margin: 20px auto auto auto;
-    padding: 0px 20px 0px 20px;
-    max-width: 90%;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
   main section{
     display: block;
@@ -115,15 +58,59 @@ main{
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
     margin: 20px auto auto auto;
-    padding: 0px 20px 0px 20px;
     max-width: 90%;
   }
-
+  main article{
+    display: flex;
+    flex-direction: column;
+    color: #1a1a1a;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+  }
+  main h1, h2, h3, h4, h5, h6{
+    font-size: medium;
+  }
+  
+/* Begin Nav Bar Conponent */
 nav{
     grid-area: n;
     min-width: 100%;
     background-color: #1a1a1a;
     border-bottom: 2px solid #eeeeee;
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+  background-color: #1a1a1a;
+  overflow: hidden;
+  }
+
+/* Style the links inside the navigation bar */
+  .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+/* Change the color of links on hover */
+  .topnav a:hover {
+  background-color: #eeeeee;
+  color: black;
+  }
+
+/* Add an active class to highlight the current page */
+  .topnav a.active {
+  background-color: #ff2a2a;
+  color: #eeeeee;
+  }
+
+/* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+  display: none;
   }
   nav ul{
     list-style: none;
@@ -135,25 +122,9 @@ nav{
     padding-inline: auto;
   }
 
+  /* Begin Sidebar Content */
 aside {
     grid-area: a;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  aside article{
-    display: block;
-    background-color: #1a1a1a;
-    border: medium solid #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px #1a1a1a;
-    padding: 10px 20px 2px 20px;
-    margin: 20px auto auto auto;
-    color: #eeeeee;
-    max-width: 70%;
   }
   aside section{
     display: block;
@@ -161,92 +132,93 @@ aside {
     border: medium solid #1a1a1a;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
-    padding: 10px 20px 2px 20px;
-    margin: 20px auto auto auto;
+    margin: 10px auto auto auto;
+    padding: 2px;
     color: #eeeeee;
-    width: 70%;
+    width: 90%;
   }
   aside section *{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
     justify-content: center;
   }
 
+/* Begin Footer Content */
 footer {
   grid-area: f;
-  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   min-height: fit-content;
   background-color: #1a1a1a;
-  bottom: 0;
   margin: 20px 0px 0px 0px;
-  font-size: small;
   color: #eeeeee;
-  display: grid;
-  grid: "l r"
-        "c c";
 }
-footer ul {
+#footcontainer{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+footer h1{
+  font-size: small;
+}
+footer ul{
+  margin: 0px;
   list-style: none;
-  padding: 0px 0px 0px 2px;
+  padding-left: 0px;
 }
-footer h1 {
-  font-size: small;
+footer ul li{
+  margin: auto;
 }
-
-footer #left {
-  grid-area: l;
+#copy {
   display: inline-block;
-  width: auto;
-  min-width: fit-content;
-  vertical-align: top;
-  margin: 0px 10px auto 30px;
-  
-}
-footer #right {
-  grid-area: r;
-  width: auto;
-  min-width: fit-content;
-  vertical-align: top;
-  margin: 0px auto auto 30px;
-  padding: 0px 10px 0px 30px;
-  grid-area: c;}
-footer #copyright {
-
-  text-align: center;
-}
-/* Add a black background color to the top navigation */
-.topnav {
   background-color: #1a1a1a;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #eeeeee;
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #ff2a2a;
+  font-size: small;
   color: #eeeeee;
-}
+  padding-top: 10px;
+  text-align: center;
+  font-style: oblique;
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
+}
+/* Portrait and Small devices */
+@media all and (max-width: 700px) {
+  body { 
+    display: grid;
+    grid: "h"
+          "n"
+          "b"
+          "a"
+          "f";
+    grid-template-rows: min-content min-content 1fr min-content min-content;
+  }
+  main section {
+    
+    max-width: 80dvw !important;
+    margin: 20px auto auto auto !important;
+  }
+  aside section {
+    
+    max-width: 80dvw !important;
+    margin: 20px auto auto auto !important;
+  }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
