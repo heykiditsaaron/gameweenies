@@ -60,7 +60,7 @@ main{
     border-radius: 10px;
     box-shadow: 2px 2px 5px #1a1a1a;
     margin: 20px auto auto auto;
-    max-width: 90%;
+    width: 90%;
   }
   main article{
     display: flex;
@@ -72,6 +72,11 @@ main{
   }
   main h1, h2, h3, h4, h5, h6{
     font-size: medium;
+    overflow-wrap: break-word;
+  }
+  main p{
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
   
 /* Begin Nav Bar Conponent */
@@ -155,26 +160,30 @@ footer {
   min-height: fit-content;
   background-color: #1a1a1a;
   margin: 20px 0px 0px 0px;
+  font-size: small;
   color: #eeeeee;
 }
 #footcontainer{
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin-right: 20px;
+  margin: auto 0px auto 0px;
+}
+#footcontainer div{
+  margin: 0px 10px;
 }
 footer h1{
   font-size: small;
 }
 footer ul{
-  margin: 0px;
+  margin: 3px;
   list-style: none;
   padding-left: 0px;
 }
 footer ul li{
-  margin: auto;
+  margin: 4px auto;
 }
 #copy {
   display: inline-block;
