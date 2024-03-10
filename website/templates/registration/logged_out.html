@@ -1,0 +1,20 @@
+{% include "base.html" %}
+{% load static %}
+{% load gravatar%}
+<head>
+        <title>Logged Out</title>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Logged Out" />
+        <meta property="og:description" content="Game Weenies is a gaming community for people. Sometimes also not people." />
+        <meta property="og:url" content="https://gameweenies.net" />
+        <meta property="og:image" content="https://gameweenies.net/img/weenie.png" />
+</head>
+<main>
+<section>
+    <div class="whitebox">
+        {{ request.build_absolute_uri }}
+        <p>Logged out!</p>
+        <a href="{% url 'login'%}">Click here to login again.</a>
+    </div>
+</section>
+</main>

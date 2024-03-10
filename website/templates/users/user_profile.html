@@ -1,0 +1,29 @@
+{% include 'base.html' %}
+{% load static %}
+{% load gravatar %}
+<head>
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<main>
+    {% if object == user %}
+    {% endif %}
+<div class="whitebox">
+    <div class="profile">
+        <div class="header">
+            <div id="name-info">
+                <h1>{{ object.displayname }}</h1> 
+                <p>{{ object.full_name }}</p>
+            </div>
+            <div id="avatar-info">
+                {% gravatar object.email %}
+                {% if object == user %}
+                <a href="https://gravatar.com/"><small>Change your avatar</small></a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="profile_content">
+
+        </div>
+    </div>
+</div>
+</main>

@@ -1,0 +1,32 @@
+{% include "base.html" %}
+{% load static %}
+{% load gravatar%}
+<head>
+        <title>Game Weenies</title>
+        <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" />
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Game Weenies" />
+        <meta property="og:description" content="Game Weenies is a gaming community for people. Sometimes also not people." />
+        <meta property="og:url" content="https://gameweenies.net" />
+        <meta property="og:image" content="https://gameweenies.net/img/weenie.png" />
+</head>
+<main>
+<div class="whitebox">
+    {% if user.is_authenticated %}
+      <p>You're already logged in.</p>
+    {% else%}        
+        <form method="post">
+          <h2>Log In</h2>
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            </div>
+          {% endfor %}
+          <input type="submit" class="button" value="Log In">
+          <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+        </form>
+      {% endif %}
+</div>
+</main>
