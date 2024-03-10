@@ -5,14 +5,16 @@
     <link href="{% static 'css/profile.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <main>
-    {% if object == user %}
-    {% endif %}
+    
 <div class="whitebox">
+    {% if object == user %}
+    <small>self profile..</small>
+    {% endif %}
     <div class="profile">
         <div class="header">
             <div id="name-info">
                 <h1>{{ object.displayname }}</h1> 
-                <p>{{ object.full_name }}</p>
+                <p>{{ object.date_joined }}</p>
             </div>
             <div id="avatar-info">
                 {% gravatar object.email %}
@@ -22,7 +24,13 @@
             </div>
         </div>
         <div class="profile_content">
-
+            <div>
+                {{ object.profile.first_name }}
+                {{ object.profile.last_name }}
+                {{ object.profile.location }}
+                {{ object.profile.birth_date }}
+                {{ object.profile.bio }}
+            </div>
         </div>
     </div>
 </div>
