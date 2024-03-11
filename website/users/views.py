@@ -1,14 +1,22 @@
-from django.urls import reverse_lazy, reverse
-from django.views import generic
-from .models import CustomUser
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.views.generic import DetailView, FormView, CreateView, TemplateView
+from django.shortcuts import HttpResponseRedirect, render
+from django.urls import reverse, reverse_lazy
+from .forms import CustomUserCreationForm, UserCreationForm
+from django.contrib.auth.models import User
+from .models import CustomUser, Profile
 
-# Create your views here.
-def redirect_to_pk(request, username):
-    object = get_object_or_404(CustomUser, displayname__iexact=username)
-    return HttpResponseRedirect(reverse_lazy('profile', kwargs={'pk': object.pk}))
-
-
-class Profile(generic.DetailView):
+class Profile(DetailView):
     model = CustomUser
     template_name = 'users/user_profile.html'
+    context_object_name = 'profile'
+
+class SignUpView(CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
+
+'''
+def SignUp(request):
+    form = CustomUserCreationForm
+    return render(request, 'registration/register.html', {'form': form})
+'''    

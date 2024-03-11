@@ -5,7 +5,7 @@ body {
         "n n"
         "b a"
         "f f";
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 2fr auto;
   grid-template-rows: min-content min-content 1fr min-content;
   background-color: #ebc544;
   background-image: url(../img/gw_background.png);
@@ -24,9 +24,8 @@ body {
     text-decoration: none;
   }
 }
-
-/* Begin Header Component */
 header{
+  /* Begin Header Component */
   grid-area: h; 
   min-width: 100%;
   max-height: fit-content; 
@@ -37,44 +36,53 @@ header{
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
-
-}
-header img{
-  max-height: 100px;
-}
-
-/* Begin Main Body Content */
-main{
-  grid-area: b;
-}
-.whitebox{
-  display: block;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 90%;
-  padding: 20px 10px 10px 20px;
-  margin: 20px auto auto auto;
-  border: medium solid #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #1a1a1a;
-  background-color: #eeeeee;
-  color: #1a1a1a;
-}
-.darkbox{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  }
+  header img{
+    max-height: 100px;
+  }
+nav{
+  /* Begin Nav Bar Conponent */
+  grid-area: n;
+  min-width: 100%;
   background-color: #1a1a1a;
-  border: medium solid #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #1a1a1a;
-  margin: 20px auto auto auto;
-  padding: 2px;
-  color: #eeeeee;
-  width: 90%;
+  border-bottom: 2px solid #eeeeee;
 }
+main{
+  /* Begin Main Body Content */
+  grid-area: b;
+  margin-left: 1dvw;
+}
+  .whitebox{
+    display: block;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    /*padding: 20px 10px 10px 20px;*/
+    margin: 20px auto auto auto;
+    border: medium solid #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1a1a1a;
+    background-color: #eeeeee;
+    color: #1a1a1a;
+  }
+  aside .darkbox{
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #1a1a1a;
+    border: medium solid #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1a1a1a;
+    margin: 20px auto auto;
+    padding: 2px;
+    color: #eeeeee;
+    width: 20dvw;
+  }
+    .whitebox p{
+      margin: 2dvh 3dvh;
+    }
 .fineprint{
   font-size: x-small !important;
 }
@@ -87,136 +95,10 @@ main{
 .title{
   text-align: center;
 }
-
-/* Begin Nav Bar Conponent */
-nav{
-  grid-area: n;
-  min-width: 100%;
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #eeeeee;
-}
-/* Navbar container */
-.navbar {
-overflow: hidden;
-background-color: #2b2b2b;
-font-family: Arial;
-padding-right: 40px !important; /* To align to dropdown*/
-padding-left: 40px;
-text-align: bottom;
-}
-
-/* Links inside the navbar */
-.navbar a {
-display: flex;
-flex-direction: column;
-float: left;
-font-size: 16px;
-color: #eeeeee;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-.navbar .login{
-float: right;
-}
-
-/* The dropdown container */
-.dropdown {
-float: right;
-min-width: fit-content;
-overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-font-size: 16px;
-min-width: fit-content;
-border: none;
-outline: none;
-color: white;
-padding: 14px 16px;
-background-color: inherit;
-font-family: inherit; /* Important for vertical align on mobile phones */
-margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover {
-background-color: #ff2a2a;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-display: none;
-position: absolute;
-right: 40px !important; /* To a lign to dropdown */
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: flex;
-flex-direction: column;
-text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-display: flex;
-flex-direction: column;
-}
-
-/* Logout Button Style */
-.logout-btn{
-font-size: 16px;
-width: 100%;
-text-align: left;
-border: none;
-outline: none;
-color: black;
-padding: 14px 16px;
-background-color: inherit;
-font-family: inherit; /* Important for vertical align on mobile phones */
-margin: 0;
-}
-.logout-btn:focus{
-outline: none;
-}
-.logout-btn:hover{
-background-color: #ddd;
-cursor: pointer;
-}
-
 /* Begin Sidebar Content */
 aside {
   grid-area: a;
-}
-aside section{
-  display: block;
-  background-color: #1a1a1a;
-  border: medium solid #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #1a1a1a;
-  margin: 20px auto auto auto;
-  padding: 2px;
-  color: #eeeeee;
-  width: 90%;
-}
-.sidenews{
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
+  margin-right: 3dvw;
 }
 /* Begin Footer Content */
 footer {
@@ -258,28 +140,35 @@ padding-top: 10px;
 text-align: center;
 font-style: oblique;
 }
+
 @media all and (max-width: 700px) {
-body { 
-  display: grid;
-  grid: "h"
-        "n"
-        "b"
-        "a"
-        "f";
-  grid-template-rows: min-content min-content 1fr min-content min-content;
-}
-main section {
-  
-  max-width: 80dvw !important;
-  margin: 20px auto auto auto !important;
-}
-aside section {
-  
-  max-width: 80dvw !important;
-  margin: 20px auto auto auto !important;
-}
-nav .nav{
-  overflow: hidden;
-}
+    body { 
+      display: grid;
+      grid: "h"
+            "n"
+            "b"
+            "a"
+            "f";
+      grid-template-rows: min-content min-content 1fr min-content min-content;
+    }
+    main{
+      margin: auto !important;
+    }
+    .whitebox {
+      
+      width: 80dvw !important;
+      margin: 20px auto auto auto !important;
+    }
+    aside{
+      margin: auto !important;
+    }
+    aside .darkbox {
+      
+      width: 80dvw !important;
+      margin: 20px auto auto auto !important;
+    }
+    .navbtn{
+      overflow: hidden;
+    }
 
 }

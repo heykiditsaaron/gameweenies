@@ -12,9 +12,12 @@
 <main>
 <section>
     <div class="whitebox">
-        {{ request.build_absolute_uri }}
-        <p>Logged out!</p>
-        <a href="{% url 'login'%}">Click here to login again.</a>
+        <div style="width: fit-content; margin: auto;">
+        <p>You have signed out of your profile.</p>
+        <p>
+        <a href="{% url 'login' %}">Click here to login again.</a>
+        </p>
+        </div>
     </div>
 </section>
 </main>

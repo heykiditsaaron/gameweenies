@@ -1,0 +1,27 @@
+{% include 'base.html' %}
+{% load static %}
+{% load gravatar %}
+<head>
+  <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<main>
+  <div class="whitebox">
+      {% if user.is_authenticated %}
+      <p>You already have an account.</p>
+      {% else %}
+      <form method="post">
+          {% csrf_token %}
+          <h2>Sign Up</h2>
+          {% for field in form %}
+            <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            </div>
+          {% endfor %}
+          <input type="submit" class="button" value="Create Account">
+          <p><a href="{% url 'login' %}">Already have an account?</a> |
+           <a href="{% url 'password_reset' %}">Lost password?</a></p>
+        </form>
+      {% endif %}
+  </div>
+</main>
