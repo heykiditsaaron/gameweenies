@@ -29,4 +29,8 @@
     font-weight: bold;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
+  }
+  .button:active{
+    background-color: #dd1a1a;
   }

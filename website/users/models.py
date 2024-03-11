@@ -55,12 +55,6 @@ class Profile(models.Model):
     def get_full_name(self):
             full_name = '%s %s' % (self.first_name, self.last_name)
             return full_name.strip()
-    
-    # Not needed for now
-    '''
-    def get_absolute_url(self):
-        return reverse_lazy('profile-view', kwargs={'pk': self.pk})
-    '''
 
 @receiver(post_save, sender=CustomUser)
 def create_user_profile(sender, instance, created, **kwargs):
