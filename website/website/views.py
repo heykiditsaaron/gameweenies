@@ -5,4 +5,10 @@ from django.shortcuts import render, HttpResponseRedirect
 
 def Homepage(request):
     form = AuthenticationForm()
-    return render(request, 'home.html', {'form': form})
+    context = {
+        'title': "Game Weenies",
+        'form': form,
+        'type': "website",
+        'description': "Game Weenies is a gaming community for people. Sometimes also not people."
+    }
+    return render(request, 'home.html', context)

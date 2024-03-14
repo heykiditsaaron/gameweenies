@@ -1,0 +1,36 @@
+{% load static %}
+{% load gravatar %}
+{% block css %}<link href="{% static 'css/test-nav.css' %}" rel="stylesheet" type="text/css" />{% endblock %}
+<nav>
+<div class="topnav" id="myTopnav">
+  <a class="nav-title">Game Weenies</a>
+  {% if user.is_authenticated %}
+    <div class="user-btn">
+    <a href="{% url 'profile' user.slug %}">{{ user.displayname }}{% gravatar user.email %}</a>
+    </div>
+  {% else %}
+  <a href="{% url 'login' %}" class="user-btn" style="display: flex !important; flex-direction: column-reverse !important; align-items: center !important;">Login <i class="fa-solid fa-user"></i></a>
+  {% endif %}
+
+  <a href="{% url 'home' %}" id="home"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="#news" id="news"><i class="fa-solid fa-newspaper"></i> News</a>
+  <a href="#servers" id="servers"><i class="fa-solid fa-gamepad"></i> Game Servers</a>
+  <a href="javascript:void(0);" class="icon" onclick="dropDown()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function dropDown() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+</nav>

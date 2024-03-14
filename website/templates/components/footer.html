@@ -1,0 +1,33 @@
+{% load static %}
+{% block footer %}
+<footer>
+    <div id="footcontainer">
+      <div style="float: left;">
+        <img src="{% static 'img/weenie.png' %}" height="120px">
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+            <li><a href="#home"><i class="fa-solid fa-house"></i>&nbspHome</a></li>
+            <li><a href="#news"><i class="fa-solid fa-newspaper"></i> News</a></li>
+            <li><a href="https://discord.gg/Dbf8Y25FeV"><i class="fa-brands fa-discord"></i>&nbspDiscord</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i>&nbspContact</a></li>
+            <li><a href="#tos"><i class="fa-solid fa-file-contract"></i>&nbspTerms and Conditions</a></li>
+            <li><a href="#tos"><i class="fa-solid fa-lock"></i>&nbspPrivacy Notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <!--Blank Div for spacing-->
+      </div>
+    </div>
+      
+  <div id="copy">
+    &copy 2024 GameWeenies. All rights reserved.
+  </div>
+  </footer>
+  {% endblock footer %}

@@ -1,0 +1,16 @@
+{% load static %}{% load gravatar %}
+<aside>
+<div class="darkbox">
+    <div class="account-menu">
+        <h4>Account Menu</h4>
+        <ul id="account-links">
+            <li><a href="#edit">Edit Profie</a></li>
+            <li><a href="#edit">Change Passord</a></li>
+        </ul>
+        <form id="logout-form" method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+        <button type="submit" class="button">Log out</button>
+        </form>
+    </div>
+</div>
+</aside>

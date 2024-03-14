@@ -1,17 +1,22 @@
-{% include 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-<head>
-<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" />
-</head>
+{% block css %}
+  <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" />
+{% endblock css %}
+{% block main %}
 <main>
 <div class="whitebox">
     {% lorem 5 p %}
 </div>
 </main>
+{% endblock main %}
+
+
+{% block aside %}
 {% if user.is_authenticated %}
-{% else %}
+  {% else %}
 <aside>
-    <div class="darkbox">
+  <div class="darkbox">
           <form method="post" action="{% url 'login' %}">
             <h2>Log In</h2>
             {% csrf_token %}
@@ -26,5 +31,6 @@
           </form>
         
     </div>
-</aside>
-{% endif %}
+    {% endif %}
+  </aside>
+{% endblock aside %}

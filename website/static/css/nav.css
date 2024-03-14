@@ -1,11 +1,18 @@
 /* Navbar container */
 .navbar {
-    overflow: hidden;
     background-color: #2b2b2b;
     font-family: Arial;
     padding-right: 40px !important; /* To align to dropdown*/
     padding-left: 40px;
     text-align: bottom;
+    }
+/* Navbar Avatar */
+    .navbar .gravatar{
+        border-radius: 50%;
+        margin: auto 10px;
+        width: 32px !important;
+        height: 32px !important;
+        border: 1px solid #2b2b2b !important;
     }
     
     /* Links inside the navbar */
@@ -21,20 +28,28 @@
     }
     /* Add a red background color to navbar links on hover */
     .navbar a:hover {
-        background-color: #ff2a2a;
+        background-color: #eee;
+        color: #1a1a1a;
     }
-    .navbar .user-btn a{
+    .user-btn a{
         float: right;
         display: flex;
         flex-direction: row-reverse !important;
-        align-items: flex-end !important;
-
-
+        align-items: flex-end !important
     }
-    .navbar .gravatar{
-        border-radius: 50%;
-        margin: auto 10px;
-        width: 32px !important;
-        height: 32px !important;
-        border: 1px solid #2b2b2b !important;
+    .user-btn a:hover{
+        background-color: transparent !important;
+        color: #eee !important;
     }
+
+@media all and (max-width: 700px) {
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .navbar a{
+        display: block;
+    }
+}

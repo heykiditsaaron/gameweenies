@@ -1,67 +1,76 @@
-{% include 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% load gravatar %}
-<head>
+{% block css %}
     <link href="{% static 'css/profile.css' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" />
-</head>
+{% endblock css %}
+{% block main %}
 <main>
 <div class="whitebox">
-    {% if profile == user %}
-    {% endif %}
     <div class="profile">
         <div class="profile-heading">
             <div id="name-info">
-                <h1>{{ profile.displayname }}</h1> 
-                <p>{{ profile.date_joined }}</p>
+                <h1>{{ username }}</h1> 
+                <p style="margin: 0px;"><strong><small>member since {{ date_joined|date:"d/m/y" }}</small></strong></p>
             </div>
             <div id="avatar-info">
-                {% gravatar profile.email %}
+                {% gravatar email %}
                 {% if profile == user %}
                 <p><a href="https://gravatar.com/"><small>Change your avatar</small></a></p>
                 {% endif %}
             </div>
         </div>
         <div class="profile_content">
-            {% if profile.private == True %}
+            {% if private == True %}
             <div>
                 <p>This user's profile is private.</p>
             </div>
             {% else %}
             <div class="section-heading">
-                <h3>About {{ profile.profile.get_full_name}}</h3>
+                <h3>Profile</h3>
+            </div>
+            {% for key,value in model.profile %}
+            <div>
+            <span class="field">{{ key }}:</span><span class="detail">{{ value }}</span>
+            </div>
+            {% endfor %}
+            <div>
+                <span class="field">Name:</span> <span class="detail">{{ name }}</span>
             </div>
             <div>
-                <span class="field">Name:</span> <span class="detail">{{ profile.profile.get_full_name }}</span>
+                <span class="field">Location:</span> <span class="detail">{{ location }}</span>
             </div>
             <div>
-                <span class="field">Location:</span> <span class="detail">{{ profile.profile.location }}</span>
+                <span class="field">Birth Date:</span> <span class="detail">{{ birth_date }}</span>
             </div>
             <div>
-                <span class="field">Birth Date:</span> <span class="detail">{{ profile.profile.birth_date }}</span>
-            </div>
-            <div>
-                <span class="field">Bio:</span> <span class="detail">{{ profile.profile.bio }}</span>
+                <span class="field">Bio:</span> <span class="detail">{{ bio }}</span>
             </div>
             {% endif %}
         </div>
     </div>
 </div>
 </main>
+{% endblock main %}
 {% if profile == user %}
+{% block aside %}
 <aside>
-<div class="darkbox">
-    <div class="account-menu">
-        <h4>Account Menu</h4>
-        <ul id="account-links">
-            <li><a href="#edit">Edit Profie</a></li>
-            <li><a href="#edit">Change Passord</a></li>
-        </ul>
-        <form id="logout-form" method="post" action="{% url 'logout' %}">
-            {% csrf_token %}
-        <button type="submit" class="button">Log out</button>
-        </form>
+    <div class="darkbox">
+        <div class="account-menu">
+            <h4>Account Menu</h4>
+            <ul id="account-links">
+                <li><a href="#edit">Edit Profie</a></li>
+                <li><a href="#edit">Change Passord</a></li>
+            </ul>
+            <form id="logout-form" method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+            <button type="submit" class="button">Log out</button>
+            </form>
+        </div>
     </div>
-</div>
 </aside>
+{% endblock aside %}
+{% else %}
+
 {% endif %}

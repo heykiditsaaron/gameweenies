@@ -1,0 +1,19 @@
+{% load static %}
+{% load gravatar %}
+{% block css %}<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css" />{% endblock %}
+<nav>
+    <div class="navbar">
+      
+      <a href="{% url 'home' %}" id="home"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#news" id="news"><i class="fa-solid fa-newspaper"></i> News</a>
+      <a href="#servers" id="servers"><i class="fa-solid fa-gamepad"></i> Game Servers</a>
+      
+      <div class="user-btn">
+        {% if user.is_authenticated %} 
+        <a href="{% url 'profile' user.slug %}">{% gravatar user.email %} {{ user.displayname }}</a>
+        {% else %}
+          <a href="{% url 'login' %}" class="user-btn" style="display: flex !important; flex-direction: column-reverse !important; align-items: center !important;">Login <i class="fa-solid fa-user"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
